@@ -131,3 +131,28 @@ Then we use an auxiliary method to compute all the *n* digit number product and 
       }
       return palindrome
     }
+
+
+#### Smallest multiples
+
+The challenge here is to find the smallest number that is divisible for all the numbers until 20. Here we don't need a program to iterate over all the solutions. We can use prime number properties and a fundamental theorem that says that any number is a product of prime numbers to find the smallest product. First we need to note that at least the product is bigger than the product of all the prime numbers until 20 so
+
+    value > 1 x 2 x 3 x 5 x 7 x 11 x 13 x 17 x 19
+
+Than we need to find all the prime factorization for all the non prime numbers between 0 and 20, so
+
+    4 = 2 x 2
+    6 = 2 x 3
+    8 = 2 x 2 x 2
+    9 = 3 x 3
+    10 = 2 x 5
+    12 = 3 x 2 x 2
+    14 = 2 x 7
+    15 = 3 x 5
+    16 = 2 x 2 x 2 x 2
+    18 = 2 x 3 x 3
+    20 = 5 x 2 x 2
+
+So the smallest number would be
+
+    v = 1 x 2⁴ x 3² x 5 x 7 x 11 x 13 x 17 x 19 = 232792560

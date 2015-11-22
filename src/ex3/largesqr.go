@@ -38,6 +38,7 @@ func largePrimeFactor(value int) int {
 }
 
 func main(){
+  fmt.Println(getFirstPrimes(10))
   v:=600851475143
   fmt.Println(largePrimeFactor(v))
   //var ola string = "Ola Euler?"

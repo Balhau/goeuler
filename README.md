@@ -139,7 +139,7 @@ The challenge here is to find the smallest number that is divisible for all the 
 
     value > 1 x 2 x 3 x 5 x 7 x 11 x 13 x 17 x 19
 
-Than we need to find all the prime factorization for all the non prime numbers between 0 and 20, so
+Then we need to find all the prime factorization for all the non prime numbers between 0 and 20, so
 
     4 = 2 x 2
     6 = 2 x 3

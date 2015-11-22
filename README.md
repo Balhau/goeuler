@@ -156,3 +156,22 @@ Than we need to find all the prime factorization for all the non prime numbers b
 So the smallest number would be
 
     v = 1 x 2⁴ x 3² x 5 x 7 x 11 x 13 x 17 x 19 = 232792560
+
+
+#### First 1000 digits index Fibonacci number
+
+We need to find the smallest index of the Fibonacci number that has 1000 digits. For this we need to take into account the theory we can find [here](http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibFormula.html#logs).
+
+Based on this we can compute the following function to get the number of digits of a Fibonacci number
+
+    func digitsFibonacci(n int) int{
+      phi:=(1+math.Sqrt(5))/2
+      return int(math.Ceil(float64(n) * math.Log10(phi) - math.Log10(math.Sqrt(5))))
+    }
+
+The solution for the problem is given by the last line printed by the following set of instructions
+
+    for n:=1;digitos<1000;n++{
+      digitos=digitsFibonacci(n);
+      fmt.Println(digitos,"-",n)
+    }

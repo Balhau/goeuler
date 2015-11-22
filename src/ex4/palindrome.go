@@ -4,23 +4,23 @@ import (
   "fmt"
 )
 
-func isPalindrome(x int) bool {
-  if (x < 0) {
+func isPalindrome(v int) bool {
+  if (v < 0) {
         return false;
   }
-  l:=0
-  r:=0
+  left:=0
+  right:=0
   div := 1;
-  for x / div >= 10 {
+  for v / div >= 10 {
       div *= 10;
   }
-  for (x != 0) {
-      l = x / div;
-      r = x % 10;
-      if (l != r){
+  for (v != 0) {
+      left = v / div;
+      right = v % 10;
+      if (left != right){
         return false;
       }
-      x = (x % div) / 10;
+      v = (v % div) / 10;
       div /= 100;
   }
   return true;

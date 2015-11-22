@@ -105,7 +105,7 @@ The last part of the problem is as follows
         }
         for (v != 0) {
             left = v / div;
-            rigth = v % 10;
+            right = v % 10;
             if (left != right){
               return false;
             }

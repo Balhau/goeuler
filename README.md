@@ -87,3 +87,47 @@ The last part of the problem is as follows
       }
       return largePrime
     }
+
+
+#### Palindrome number
+
+  Here we were challenged to find the biggest [palindrome](https://en.wikipedia.org/wiki/Palindrome) number that is a result of a multiplication between number of three digits. First we need to find a way to check if a number is a palindrome. For this we do two things, first we need to compute the length of the number and then we pick the first number and the last and we compare each other, after some time we found that could be done like this
+
+      func isPalindrome(v int) bool {
+        if (v < 0) {
+              return false;
+        }
+        left:=0
+        right:=0
+        div := 1;
+        for v / div >= 10 {
+            div * = 10;
+        }
+        for (v != 0) {
+            left = v / div;
+            rigth = v % 10;
+            if (left != right){
+              return false;
+            }
+            v = (v % div) / 10;
+            div /= 100;
+        }
+        return true;
+      }
+
+
+Then we use an auxiliary method to compute all the *n* digit number product and check for the biggest palindrome
+
+    func computeBiggestPalindrome(dim int) int {
+      palindrome:=0
+      aux := 0
+      for i:=0;i<dim;i++ {
+        for j:=0;j<dim;j++ {
+          aux = i*j
+          if(isPalindrome(aux) && aux > palindrome){
+            palindrome=aux
+          }
+        }
+      }
+      return palindrome
+    }

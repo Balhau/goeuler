@@ -175,3 +175,13 @@ The solution for the problem is given by the last line printed by the following 
       digitos=digitsFibonacci(n);
       fmt.Println(digitos,"-",n)
     }
+
+#### Get the 10001 prime number
+
+We already have a function to get prime numbers less than a certain value. I just reuse this function with several atempts and figure out that if I call the function as
+
+    getFirstPrimes(104750)
+
+this would return the first 10002 prime numbers since it returns also 1 as a prime number we retrieve the position 10002 as the 10001 prime number, which is
+
+        104743
